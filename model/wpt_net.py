@@ -8,7 +8,7 @@ from .gumbel import GumbleSoftmax
 from .se_block import SE_Block
 from .init_utils import *
 
-class WPTNet(models.MobileNetV2):
+class WPTNet(models.MobileNetV2): 
     def __init__(self, input_channels=32, num_classes=1000, use_attention=False, use_gate=False):
         super(WPTNet, self).__init__()
 
@@ -17,7 +17,7 @@ class WPTNet(models.MobileNetV2):
 
         # remove first conv layer
         self.features = self.features[1:]
-
+############### burada kaldık 14.01.2025 #####################################3
         classifier_input_features = self.classifier[1].in_features
 
         self.classifier = nn.Sequential(
